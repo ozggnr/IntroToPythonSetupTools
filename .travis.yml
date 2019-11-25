@@ -7,6 +7,5 @@ install:
  - pip install -e .
  
 script:
- - python3 from o_pkg import newly
- - python3 newhom9.py
+ - python3 __init__.py
  
