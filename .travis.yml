@@ -1,0 +1,12 @@
+language: python
+
+python:
+ - 3.7
+ 
+install:
+ - pip install -e .
+ 
+script:
+ - python3 newly.py
+ - python3 newhom9.py
+ 
