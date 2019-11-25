@@ -11,7 +11,7 @@ data1['diagnosis'] = b_cancer.target
 #print(b_cancer['target'].value_counts())
 #sns.countplot(b_cancer['target'],label='Count')
 #plt.show()
-print(data1[:,2])
+
 #print(data1.keys())
 #for el in data1.keys():
 #    plt.scatter(b_cancer['target'],data1[el])
@@ -21,7 +21,8 @@ print(data1[:,2])
 data2 = data1[['mean radius','mean perimeter','mean area','mean concave points','perimeter error','area error',
               'worst radius','worst perimeter','worst area','worst concave points','diagnosis']]
 
-sns.pairplot(data2, hue='diagnosis')
+
+sns.pairplot(data2, hue='diagnosis', diag_kind = 'hist')
 plt.savefig('pairplot_target.png')
 plt.show()
 
@@ -38,7 +39,7 @@ plt.savefig('similarities.png')
 plt.show()
 
 data3 = data1[['worst concave points', 'perimeter error','mean radius', 'diagnosis']]
-sns.pairplot(data3, hue = 'diagnosis' , palette=sns.color_palette("cubehelix",2), markers=['D','o'])
+sns.pairplot(data3, hue = 'diagnosis', diag_kind = 'hist', palette=sns.color_palette("cubehelix",2), markers=['D','o'])
 plt.savefig('final_feature.png')
 plt.show()
 #plt.scatter(range(len(data1['perimeter error'])),data1['perimeter error']/data1['perimeter error'].max(), label='perimeter error')
