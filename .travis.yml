@@ -8,5 +8,6 @@ install:
  - pip install -r requirements.txt
  
 script:
- - python3
- - cat 3+5
+ - cd o_pkg
+ - python3 newly.py
+ - python3 newhom9.py
