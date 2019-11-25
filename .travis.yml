@@ -9,4 +9,4 @@ install:
  
 script:
  - python3
- - 3+5
+ - cat 3+5
